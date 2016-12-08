@@ -2,8 +2,9 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/m/MessageToast",
 	"sap/ui/model/json/JSONModel",
+	"sap/ui/core/routing/History",
 	"sap/ui/model/odata/ODataModel"
-], function(Controller, MessageToast, JSONModel, ODataModel) {
+], function(Controller, MessageToast, JSONModel, ODataModel, History) {
 	"use strict";
 
 	return Controller.extend("htf.marsap.controller.SensorDetail", {
@@ -25,6 +26,19 @@ sap.ui.define([
 			}});
 			
 			this.getView().setModel(zModel, "oModel");
+		},
+		
+		onNavBack: function() {
+			var oHistory = History.getInstance(),
+				sPreviousHash = oHistory.getPreviousHash();
+			if (sPreviousHash !== undefined) {
+				// The history contains a previous entry
+				history.go(-1);
+			} else {
+				// Otherwise we go backwards with a forward history
+				var bReplace = true;
+				this.getRouter().navTo("games", {}, bReplace);
+			}
 		}
 	});
 });

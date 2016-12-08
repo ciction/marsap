@@ -26,7 +26,6 @@
 							<items>
 								<ColumnListItem>
 									<cells>
-
 										<Text text="{oModel>G_CREATED}"/>
 										<Text text="{oModel>C_TIMESTAMP}"/>
 										<Text text="{oModel>C_TEMPERATURE}"/>

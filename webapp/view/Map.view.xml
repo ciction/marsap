@@ -3,7 +3,7 @@
 	xmlns:mvc="sap.ui.core.mvc" xmlns:gmaps="openui5.googlemaps" controllerName="htf.marsap.controller.Map">
 	<App id="app">
 		<pages>
-			<Page>
+			<Page title="MarSAP">
 				<Panel>
 					<gmaps:Map height="450px" width="100%" zoom="15.5" lat="51.168827" lng="4.432924">
 						<gmaps:markers>
@@ -11,14 +11,29 @@
 						</gmaps:markers>
 					</gmaps:Map>
 					<List headerText="sensors">
-						<DisplayListItem label="Name" value="sensor 1" press="showDetail" type="Navigation"/>
-						<DisplayListItem label="Name" value="sensor 2" press="showDetail" type="Navigation"/>
-						<DisplayListItem label="Name" value="sensor 3" press="showDetail" type="Navigation"/>
-						<DisplayListItem label="Name" value="sensor 4" press="showDetail" type="Navigation"/>
+						<DisplayListItem label="Device 1" value="temperatuur sensor 1" press="showDetail" type="Navigation"/>
+						<DisplayListItem label="Device 2" value="motion sensor 1" press="showDetail" type="Navigation"/>
+						<DisplayListItem label="Device 3" value="temperatuur sensor 2" press="showDetail" type="Navigation"/>
+						<DisplayListItem label="Device 4" value="motion sensor 2" press="showDetail" type="Navigation"/>
 					</List>
 				</Panel>
 				<footer>
 					<OverflowToolbar>
+						<ObjectStatus
+				icon="sap-icon://shield"
+				class="sapUiSmallMarginBottom"
+				text="No invaders at area 1"
+				state="succes" />
+				<ObjectStatus
+				icon="sap-icon://shield"
+				class="sapUiSmallMarginBottom"
+				text="invaders at area 2"
+				state="Error" />
+				<ObjectStatus
+				icon="sap-icon://shield"
+				class="sapUiSmallMarginBottom"
+				text="Area 3 recently cleared"
+				state="Warning" />
 						<ToolbarSpacer/>
 						<Button text="beheer drones" press="showDrone"/>
 					</OverflowToolbar>
