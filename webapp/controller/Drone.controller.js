@@ -6,18 +6,10 @@ sap.ui.define([
 ], function(Controller, MessageToast, Filter, FilterOperator, formatter) {
 	"use strict";
 
-	return Controller.extend("htf.marsap.controller.Map", {
+	return Controller.extend("htf.marsap.controller.Drone", {
 		onInit: function() {
 			// Register to the add route matched
 			
-		},
-		
-		showDetail: function(){
-			this.getOwnerComponent().getRouter().navTo("sensorDetail");
-		},
-		
-		showDrone: function(){
-			this.getOwnerComponent().getRouter().navTo("drone");
 		}
 	});
 });
