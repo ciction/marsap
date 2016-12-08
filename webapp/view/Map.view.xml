@@ -3,36 +3,27 @@
 	xmlns:mvc="sap.ui.core.mvc" xmlns:gmaps="openui5.googlemaps" controllerName="htf.marsap.controller.Map">
 	<App>
 		<pages>
-			<Panel>
-				<gmaps:Map height="450px" width="450px" zoom="15.5" lat="51.168827" lng="4.432924">
-					<gmaps:markers>
-						<gmaps:Marker lat="51.168827" lng="4.432924" info="Fort 5"/>
-					</gmaps:markers>
-				</gmaps:Map>
-				<List
-				headerText="sensors" >
-				<DisplayListItem
-					label="Name"
-					value="sensor 1" 
-					press="showDetail"
-					type="Navigation"/>
-				<DisplayListItem
-					label="Name"
-					value="sensor 2" 
-					press="showDetail"
-					type="Navigation"/>
-				<DisplayListItem
-					label="Name"
-					value="sensor 3" 
-					press="showDetail"
-					type="Navigation"/>
-				<DisplayListItem
-					label="Name"
-					value="sensor 4" 
-					press="showDetail"
-					type="Navigation"/>
-			</List>
-			</Panel>
+			<Page>
+				<Panel>
+					<gmaps:Map height="450px" width="450px" zoom="15.5" lat="51.168827" lng="4.432924">
+						<gmaps:markers>
+							<gmaps:Marker lat="51.168827" lng="4.432924" info="Fort 5"/>
+						</gmaps:markers>
+					</gmaps:Map>
+					<List headerText="sensors">
+						<DisplayListItem label="Name" value="sensor 1" press="showDetail" type="Navigation"/>
+						<DisplayListItem label="Name" value="sensor 2" press="showDetail" type="Navigation"/>
+						<DisplayListItem label="Name" value="sensor 3" press="showDetail" type="Navigation"/>
+						<DisplayListItem label="Name" value="sensor 4" press="showDetail" type="Navigation"/>
+					</List>
+				</Panel>
+				<footer>
+					<OverflowToolbar>
+						<ToolbarSpacer/>
+						<Button text="beheer drones" press="navToTeam"/>
+					</OverflowToolbar>
+				</footer>
+			</Page>
 		</pages>
 	</App>
 </mvc:View>
