@@ -10,6 +10,10 @@ sap.ui.define([
 		onInit: function() {
 			// Register to the add route matched
 			
+		},
+		
+		showDetail: function(){
+			this.getOwnerComponent().getRouter().navTo("sensorDetail");
 		}
 	});
 });

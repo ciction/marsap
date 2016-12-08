@@ -61,6 +61,36 @@
 					"bundleName": "htf.marsap.i18n.i18n"
 				}
 			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "htf.marsap.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition":"slide",
+				"async": true
+			},
+			"routes": [{
+				"name": "map",
+				"pattern": "",
+				"target": ["map"]
+			}, {
+				"name": "sensorDetail",
+				"pattern": "sensorDetail",
+				"target": ["sensorDetail"]
+			}],
+			"targets": {
+				"map": {
+					"viewName": "Map",
+					"viewLevel": 1
+				},
+				"sensorDetail": {
+					"viewName": "SensorDetail",
+					"viewLevel": 1
+				}
+			}
 		}
 	},
 	"sap.platform.hcp": {

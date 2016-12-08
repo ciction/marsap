@@ -2,13 +2,12 @@
 	xmlns:mvc="sap.ui.core.mvc" controllerName="htf.marsap.controller.SensorDetail">
 	<App>
 		<pages>
-			<Page title="{oModel>G_DEVICE}">
+			<Page title="sensor">
 				<content>
 					<l:VerticalLayout>
 						<Table items="{oModel>/NEO_73EU60CR98FIAF9JSH1ZUEZ5L.T_IOT_41678719D8EF46938B36}" id="TeamTable" mode="SingleSelectLeft">
 							<headerToolbar>
-								<Toolbar>
-								</Toolbar>
+								<Toolbar></Toolbar>
 							</headerToolbar>
 							<columns>
 								<Column>
@@ -27,6 +26,7 @@
 							<items>
 								<ColumnListItem>
 									<cells>
+
 										<Text text="{oModel>G_CREATED}"/>
 										<Text text="{oModel>C_TIMESTAMP}"/>
 										<Text text="{oModel>C_TEMPERATURE}"/>
@@ -38,8 +38,7 @@
 					</l:VerticalLayout>
 				</content>
 				<footer>
-					<OverflowToolbar>
-					</OverflowToolbar>
+					<OverflowToolbar></OverflowToolbar>
 				</footer>
 			</Page>
 		</pages>
