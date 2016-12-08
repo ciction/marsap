@@ -1,0 +1,47 @@
+<mvc:View displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc" controllerName="htf.marsap.controller.SensorDetail">
+	<App>
+		<pages>
+			<Page title="{oModel>G_DEVICE}">
+				<content>
+					<l:VerticalLayout>
+						<Table items="{oModel>/NEO_73EU60CR98FIAF9JSH1ZUEZ5L.T_IOT_41678719D8EF46938B36}" id="TeamTable" mode="SingleSelectLeft">
+							<headerToolbar>
+								<Toolbar>
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								<Column>
+									<Text text="created"/>
+								</Column>
+								<Column>
+									<Text text="time"/>
+								</Column>
+								<Column>
+									<Text text="temperatuur"/>
+								</Column>
+								<Column>
+									<Text text="lucht vochtigheid"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="{oModel>G_CREATED}"/>
+										<Text text="{oModel>C_TIMESTAMP}"/>
+										<Text text="{oModel>C_TEMPERATURE}"/>
+										<Text text="{oModel>C_HUMIDITY}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</l:VerticalLayout>
+				</content>
+				<footer>
+					<OverflowToolbar>
+					</OverflowToolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
