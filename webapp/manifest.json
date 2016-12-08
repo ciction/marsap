@@ -80,6 +80,10 @@
 				"name": "sensorDetail",
 				"pattern": "sensorDetail",
 				"target": ["sensorDetail"]
+			}, {
+				"name": "drone",
+				"pattern": "drone",
+				"target": ["drone"]
 			}],
 			"targets": {
 				"map": {
@@ -88,6 +92,10 @@
 				},
 				"sensorDetail": {
 					"viewName": "SensorDetail",
+					"viewLevel": 1
+				},
+				"drone": {
+					"viewName": "Drone",
 					"viewLevel": 1
 				}
 			}
