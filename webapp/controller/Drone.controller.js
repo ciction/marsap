@@ -3,7 +3,8 @@ sap.ui.define([
 	"sap/m/MessageToast",
 	"sap/ui/model/Filter",
 	"sap/ui/core/routing/History",
-	"sap/ui/model/FilterOperator"
+	"sap/ui/model/FilterOperator",
+	"sap/m/MessageToast"
 ], function(Controller, MessageToast, Filter, FilterOperator, formatter, History) {
 	"use strict";
 
@@ -14,16 +15,22 @@ sap.ui.define([
 		},
 		
 		onNavBack: function() {
-			var oHistory = History.getInstance(),
-				sPreviousHash = oHistory.getPreviousHash();
-			if (sPreviousHash !== undefined) {
-				// The history contains a previous entry
-				history.go(-1);
-			} else {
-				// Otherwise we go backwards with a forward history
-				var bReplace = true;
-				this.getRouter().navTo("games", {}, bReplace);
-			}
+			this.getOwnerComponent().getRouter().navTo("map");
+			MessageToast.show("Returning to basis", {
+				closeOnBrowserNavigation: false
+			});
+		},
+		
+		onFire: function(){
+			MessageToast.show("Missile fired!!", {
+				closeOnBrowserNavigation: false
+			});
+		},
+		
+		onLaunch: function(){
+			MessageToast.show("Taking off", {
+				closeOnBrowserNavigation: false
+			});
 		}
 	});
 });

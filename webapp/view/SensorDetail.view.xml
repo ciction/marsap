@@ -2,10 +2,10 @@
 	xmlns:mvc="sap.ui.core.mvc" controllerName="htf.marsap.controller.SensorDetail">
 	<App id="app">
 		<pages>
-			<Page title="sensor">
+			<Page title="sensor" showNavButton="true" navButtonPress="onNavBack">
 				<content>
 					<l:VerticalLayout>
-						<Table items="{oModel>/NEO_73EU60CR98FIAF9JSH1ZUEZ5L.T_IOT_41678719D8EF46938B36}" id="TeamTable" mode="SingleSelectLeft">
+						<Table items="" id="TeamTable" mode="SingleSelectLeft">
 							<headerToolbar>
 								<Toolbar></Toolbar>
 							</headerToolbar>
@@ -26,10 +26,10 @@
 							<items>
 								<ColumnListItem>
 									<cells>
-										<Text text="{oModel>G_CREATED}"/>
-										<Text text="{oModel>C_TIMESTAMP}"/>
-										<Text text="{oModel>C_TEMPERATURE}"/>
-										<Text text="{oModel>C_HUMIDITY}"/>
+										<Text text="8 december 2016 8:30"/>
+										<Text text="8 december 2016 8:30"/>
+										<Text text="37°C"/>
+										<Text text="25"/>
 									</cells>
 								</ColumnListItem>
 							</items>

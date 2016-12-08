@@ -1,23 +1,17 @@
-<mvc:View displayBlock="true" 
-		xmlns="sap.m" xmlns:core="sap.ui.core" 
-		xmlns:l="sap.ui.layout" 
-		xmlns:f="sap.ui.layout.form"
-		xmlns:mvc="sap.ui.core.mvc" 
-		controllerName="htf.marsap.controller.Drone">
+<mvc:View displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc" controllerName="htf.marsap.controller.Drone">
 	<App id="app">
 		<pages>
-			<Page title="openSAP - Developing with SAPUI5" navButtonPress="onNavBack">
+			<Page title="Drone" showNavButton="true" navButtonPress="onNavBack">
 				<content>
-					<FlexBox
-					height="100px"
-					alignItems="Start"
-					justifyContent="Center">
-					
-					<core:HTML  content="&lt;iframe width=&quot;840&quot; height=&quot;473&quot; src=&quot;https://www.youtube.com/embed/8k51ChP_er8&quot; frameborder=&quot;5&quot; allowfullscreen&gt;&lt;/iframe&gt;">
-					</core:HTML>	
-				</FlexBox>
-				
+					<FlexBox height="500px" alignItems="Start" justifyContent="Center">
+						<core:HTML
+							content="&lt;iframe width=&quot;840&quot; height=&quot;473&quot; src=&quot;https://www.youtube.com/embed/8k51ChP_er8&quot; frameborder=&quot;5&quot; allowfullscreen&gt;&lt;/iframe&gt;"></core:HTML>
+					</FlexBox>
 				</content>
+				<Button text="launch" width="100%" press="onLaunch"/>
+				<Button text="return to basis" width="100%" press="onNavBack"/>
+				<Button type="Reject" text="fire missile" width="100%" press="onFire"/>
 			</Page>
 		</pages>
 	</App>

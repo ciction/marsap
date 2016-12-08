@@ -9,7 +9,7 @@ sap.ui.define([
 
 	return Controller.extend("htf.marsap.controller.SensorDetail", {
 		onInit: function() {
-			var oModel = new JSONModel();
+			/*var oModel = new JSONModel();
 			
 			var zModel = new ODataModel("/marsap");   
 			
@@ -25,20 +25,11 @@ sap.ui.define([
 				jQuery.sap.log.error(oError);
 			}});
 			
-			this.getView().setModel(zModel, "oModel");
+			this.getView().setModel(zModel, "oModel");*/
 		},
 		
 		onNavBack: function() {
-			var oHistory = History.getInstance(),
-				sPreviousHash = oHistory.getPreviousHash();
-			if (sPreviousHash !== undefined) {
-				// The history contains a previous entry
-				history.go(-1);
-			} else {
-				// Otherwise we go backwards with a forward history
-				var bReplace = true;
-				this.getRouter().navTo("games", {}, bReplace);
-			}
+			this.getOwnerComponent().getRouter().navTo("map");
 		}
 	});
 });
