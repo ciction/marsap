@@ -39,7 +39,7 @@
 	"sap.ui5": {
 		"_version": "1.1.0",
 		"rootView": {
-			"viewName": "htf.marsap.view.Game",
+			"viewName": "htf.marsap.view.Map",
 			"type": "XML"
 		},
 		"dependencies": {

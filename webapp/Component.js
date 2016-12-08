@@ -1,7 +1,7 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"htf.marsap/model/models",
+	"htf/marsap/model/models",
 	"sap/ui/model/odata/ODataModel"
 ], function(UIComponent, Device, models, ODataModel) {
 	"use strict";
@@ -27,7 +27,7 @@ sap.ui.define([
 			this.setModel(models.createDeviceModel(), "device");
 			
 			// Initialize router
-			this.getRouter().initialize();
+			//this.getRouter().initialize();
 		}
 	});
 });
