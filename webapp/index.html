@@ -18,6 +18,8 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 
 		<script>
+			sap.ui.getCore().loadLibrary("openui5.googlemaps", "../openui5/googlemaps/");
+		
 			sap.ui.getCore().attachInit(function() {
 				new sap.m.Shell({
 					app: new sap.ui.core.ComponentContainer({
