@@ -10,6 +10,10 @@ sap.ui.define([
 		onInit: function() {
 			// Register to the add route matched
 			
+		},
+		
+		onDronesSent: function(evt){
+			MessageToast.show(evt.getSource().getId() + " Drones Sent!");
 		}
 	});
 });
