@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <mvc:View displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
 	xmlns:mvc="sap.ui.core.mvc" xmlns:gmaps="openui5.googlemaps" controllerName="htf.marsap.controller.Map">
-	<App>
+	<App id="app">
 		<pages>
 			<Page>
 				<Panel>
-					<gmaps:Map height="450px" width="450px" zoom="15.5" lat="51.168827" lng="4.432924">
+					<gmaps:Map height="450px" width="100%" zoom="15.5" lat="51.168827" lng="4.432924">
 						<gmaps:markers>
 							<gmaps:Marker lat="51.168827" lng="4.432924" info="Fort 5"/>
 						</gmaps:markers>
@@ -20,7 +20,7 @@
 				<footer>
 					<OverflowToolbar>
 						<ToolbarSpacer/>
-						<Button text="beheer drones" press="navToTeam"/>
+						<Button text="beheer drones" press="showDrone"/>
 					</OverflowToolbar>
 				</footer>
 			</Page>
